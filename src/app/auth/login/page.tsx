@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -7,7 +8,7 @@ import { signIn } from 'next-auth/react';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') ?? '/';
@@ -33,7 +34,7 @@ export default function LoginPage() {
       toast.error('Invalid email or password');
       setLoading(false);
     } else {
-      toast.success('Welcome back! 👋');
+      toast.success('Welcome back!');
       router.push(callbackUrl);
       router.refresh();
     }
@@ -88,21 +89,14 @@ export default function LoginPage() {
               className="btn btn-accent w-100 py-2 rounded-pill"
               disabled={loading}
             >
-              {loading ? (
-                <span className="spinner-border spinner-border-sm me-2" role="status" />
-              ) : null}
+              {loading ? <span className="spinner-border spinner-border-sm me-2" role="status" /> : null}
               {loading ? 'Signing in…' : 'Sign In'}
             </motion.button>
           </form>
 
-          <div className="divider-text my-3">
-            <span>or</span>
-          </div>
+          <div className="divider-text my-3"><span>or</span></div>
 
-          <div
-            className="p-3 rounded-3 mb-3"
-            style={{ background: '#f8f9fa', fontSize: '0.8rem', color: '#666' }}
-          >
+          <div className="p-3 rounded-3 mb-3" style={{ background: '#f8f9fa', fontSize: '0.8rem', color: '#666' }}>
             <strong>Demo accounts:</strong><br />
             Admin: admin@aardra.com / Admin123!<br />
             User: user@aardra.com / User123!
@@ -117,5 +111,13 @@ export default function LoginPage() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense>
+      <LoginForm />
+    </Suspense>
   );
 }

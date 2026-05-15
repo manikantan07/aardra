@@ -1,13 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useCartStore } from '@/store/cartStore';
-import { formatPrice } from '@/lib/utils';
 
-export default function OrderSuccessPage() {
+function OrderSuccessContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get('session_id');
   const clearCart = useCartStore((s) => s.clearCart);
@@ -40,8 +39,8 @@ export default function OrderSuccessPage() {
           >
             <h2>Order Placed Successfully!</h2>
             <p>
-              Thank you for your purchase! We've received your order and are processing it now.
-              You'll receive a confirmation email shortly.
+              Thank you for your purchase! We&apos;ve received your order and are processing it now.
+              You&apos;ll receive a confirmation email shortly.
             </p>
 
             {sessionId && (
@@ -55,7 +54,7 @@ export default function OrderSuccessPage() {
 
             <div className="row g-3 mb-4" style={{ maxWidth: 500, margin: '0 auto 2rem' }}>
               {[
-                { icon: '📦', title: 'Processing', desc: 'We\'re preparing your order' },
+                { icon: '📦', title: 'Processing', desc: "We're preparing your order" },
                 { icon: '🚚', title: '2–5 Days', desc: 'Estimated delivery time' },
                 { icon: '📧', title: 'Email Sent', desc: 'Check your inbox' },
               ].map((step) => (
@@ -81,5 +80,13 @@ export default function OrderSuccessPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function OrderSuccessPage() {
+  return (
+    <Suspense>
+      <OrderSuccessContent />
+    </Suspense>
   );
 }

@@ -22,7 +22,7 @@ export default function NotFound() {
         <h1 style={{ fontSize: '5rem', fontWeight: 900, color: '#1a1a2e', lineHeight: 1 }}>404</h1>
         <h2 className="fw-bold mb-2" style={{ color: '#1a1a2e' }}>Page Not Found</h2>
         <p className="text-muted mb-4" style={{ maxWidth: 400, margin: '0 auto 1.5rem' }}>
-          The page you're looking for doesn't exist or has been moved.
+          The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <div className="d-flex gap-3 justify-content-center flex-wrap">
           <Link href="/" className="btn btn-accent rounded-pill px-5">
