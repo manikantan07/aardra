@@ -94,14 +94,6 @@ function LoginForm() {
             </motion.button>
           </form>
 
-          <div className="divider-text my-3"><span>or</span></div>
-
-          <div className="p-3 rounded-3 mb-3" style={{ background: '#f8f9fa', fontSize: '0.8rem', color: '#666' }}>
-            <strong>Demo accounts:</strong><br />
-            Admin: admin@aardra.com / Admin123!<br />
-            User: user@aardra.com / User123!
-          </div>
-
           <p className="text-center text-muted mb-0" style={{ fontSize: '0.875rem' }}>
             Don&apos;t have an account?{' '}
             <Link href="/auth/register" className="text-decoration-none fw-semibold" style={{ color: '#e94560' }}>
