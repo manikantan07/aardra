@@ -1,0 +1,123 @@
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: all 0.22s ease;
+}
+
+.btn-accent {
+  background: $accent;
+  border-color: $accent;
+  color: #fff;
+
+  &:hover, &:focus {
+    background: darken($accent, 8%);
+    border-color: darken($accent, 8%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba($accent, 0.35);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+.btn-outline-accent {
+  border-color: $accent;
+  color: $accent;
+
+  &:hover {
+    background: $accent;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba($accent, 0.3);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-primary {
+  background: $primary;
+  border-color: $primary;
+
+  &:hover, &:focus {
+    background: lighten($primary, 8%);
+    border-color: lighten($primary, 8%);
+    box-shadow: 0 4px 16px rgba($primary, 0.35);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-cart {
+  background: $accent;
+  border-color: $accent;
+  color: #fff;
+  border-radius: $border-radius-pill;
+  padding: 0.55rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover::before { transform: scaleX(1); }
+  &:hover { color: #fff; }
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.875rem;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 50%;
+  background: transparent;
+  color: $primary;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-weight: 600;
+
+  &:hover {
+    border-color: $accent;
+    background: $accent;
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    &:hover { transform: none; background: transparent; color: $primary; border-color: #e0e0e0; }
+  }
+}
+
+.qty-display {
+  width: 36px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: $primary;
+}

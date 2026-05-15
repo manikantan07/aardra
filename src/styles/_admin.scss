@@ -1,0 +1,168 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+
+  &__sidebar {
+    width: 240px;
+    background: $primary;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+
+    .sidebar-brand {
+      padding: 1.5rem 1.25rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+
+      h5 {
+        color: #fff;
+        font-weight: 800;
+        margin: 0;
+        span { color: $accent; }
+      }
+
+      small {
+        color: rgba(255,255,255,0.5);
+        font-size: 0.75rem;
+      }
+    }
+
+    .sidebar-nav {
+      padding: 1rem 0;
+
+      .nav-item { margin: 0.1rem 0.75rem; }
+
+      .nav-link {
+        color: rgba(255,255,255,0.7);
+        border-radius: $border-radius-sm;
+        padding: 0.6rem 0.9rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        transition: all 0.2s ease;
+        text-decoration: none;
+
+        .nav-icon { font-size: 1rem; width: 1.25rem; text-align: center; }
+
+        &:hover {
+          background: rgba(255,255,255,0.08);
+          color: #fff;
+        }
+
+        &.active {
+          background: $accent;
+          color: #fff;
+          box-shadow: 0 4px 12px rgba($accent, 0.3);
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    min-width: 0;
+    background: #f4f5f7;
+    padding: 2rem;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: $primary;
+    margin: 0;
+  }
+
+  .breadcrumb {
+    font-size: 0.825rem;
+    color: #888;
+  }
+}
+
+.admin-table {
+  background: #fff;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+
+  table {
+    margin: 0;
+
+    thead th {
+      background: $primary;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.775rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: none;
+      padding: 0.9rem 1.25rem;
+    }
+
+    tbody tr {
+      transition: background 0.15s ease;
+
+      &:hover { background: #fafafa; }
+
+      td {
+        padding: 0.9rem 1.25rem;
+        border-bottom: 1px solid #f5f5f5;
+        vertical-align: middle;
+        font-size: 0.875rem;
+        color: #444;
+      }
+
+      &:last-child td { border-bottom: none; }
+    }
+  }
+
+  &__product-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: $border-radius-sm;
+    object-fit: cover;
+  }
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: $border-radius-pill;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  &.pending    { background: rgba($warning, 0.12); color: darken($warning, 20%); }
+  &.processing { background: rgba($info, 0.12);    color: darken($info, 20%); }
+  &.shipped    { background: rgba($primary, 0.1);  color: $primary; }
+  &.delivered  { background: rgba($success, 0.12); color: darken($success, 10%); }
+  &.cancelled  { background: rgba($danger, 0.12);  color: darken($danger, 10%); }
+  &.refunded   { background: rgba(#888, 0.1);      color: #555; }
+}

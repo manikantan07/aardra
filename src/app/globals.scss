@@ -1,0 +1,53 @@
+// 1. Variables MUST come first — overrides Bootstrap defaults
+@import '../styles/variables';
+
+// 2. Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// 3. Our partials (variables are now globally in scope via @import)
+@import '../styles/mixins';
+@import '../styles/navbar';
+@import '../styles/cards';
+@import '../styles/buttons';
+@import '../styles/product';
+@import '../styles/cart';
+@import '../styles/admin';
+@import '../styles/utilities';
+
+// 4. Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+// 5. Global base styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  background: #fff;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: $accent; }
+
+:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+
+.offcanvas-backdrop.show { opacity: 0.5; }
+
+img { max-width: 100%; height: auto; }
+
+a { transition: color 0.2s ease; }

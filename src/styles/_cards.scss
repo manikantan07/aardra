@@ -1,0 +1,230 @@
+.product-card {
+  border: none;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+
+    .product-card__image img {
+      transform: scale(1.07);
+    }
+
+    .product-card__actions {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background: #f5f5f5;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    .badge-discount {
+      background: $accent;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: $border-radius-sm;
+      letter-spacing: 0.3px;
+    }
+
+    .badge-featured {
+      background: $primary;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.15rem 0.45rem;
+      border-radius: $border-radius-sm;
+    }
+  }
+
+  &__wishlist {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+
+    &:hover {
+      background: #fff;
+      color: $accent;
+      transform: scale(1.1);
+    }
+  }
+
+  &__actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+  }
+
+  &__body {
+    padding: 1.1rem 1.25rem 1.25rem;
+  }
+
+  &__category {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: $accent;
+    margin-bottom: 0.35rem;
+  }
+
+  &__name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $primary;
+    @include truncate(2);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.6rem;
+
+    .stars { color: $warning; font-size: 0.75rem; }
+    .count { font-size: 0.75rem; color: #999; }
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+
+    .price-current {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $primary;
+    }
+
+    .price-compare {
+      font-size: 0.85rem;
+      color: #bbb;
+      text-decoration: line-through;
+    }
+  }
+}
+
+// Skeleton loading card
+.product-card-skeleton {
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  height: 100%;
+
+  .skeleton-image {
+    aspect-ratio: 1 / 1;
+    @include skeleton;
+  }
+
+  .skeleton-body {
+    padding: 1.1rem 1.25rem 1.25rem;
+  }
+
+  .skeleton-line {
+    height: 12px;
+    border-radius: 6px;
+    margin-bottom: 0.6rem;
+    @include skeleton;
+
+    &.short { width: 40%; }
+    &.medium { width: 70%; }
+    &.full { width: 100%; }
+    &.price { width: 55%; height: 16px; margin-top: 0.4rem; }
+  }
+}
+
+// Stat card for admin
+.stat-card {
+  border: none;
+  border-radius: $border-radius-lg;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  &__value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: $primary;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+
+  &__label {
+    font-size: 0.825rem;
+    color: #888;
+    font-weight: 500;
+  }
+}
