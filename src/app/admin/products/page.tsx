@@ -2,10 +2,8 @@ import type { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { authOptions } from '@/lib/auth';
-import { getProducts, getCategories, deleteProduct } from '@/actions/productActions';
-import { formatPrice } from '@/lib/utils';
+import { getProducts, getCategories } from '@/actions/productActions';
 import AdminProductsClient from './AdminProductsClient';
 
 export const metadata: Metadata = { title: 'Manage Products | Admin' };
