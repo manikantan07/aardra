@@ -48,7 +48,7 @@ export default function Footer() {
                 { label: 'Home & Decor', href: '/products?category=home-decor' },
                 { label: 'New Arrivals', href: '/products?sort=newest' },
               ].map((link) => (
-                <li key={link.href} className="mb-2">
+                <li key={link.label} className="mb-2">
                   <Link href={link.href} style={{ fontSize: '0.875rem' }}>{link.label}</Link>
                 </li>
               ))}
@@ -65,7 +65,7 @@ export default function Footer() {
                 { label: 'Register', href: '/auth/register' },
                 { label: 'Cart', href: '/cart' },
               ].map((link) => (
-                <li key={link.href} className="mb-2">
+                <li key={link.label} className="mb-2">
                   <Link href={link.href} style={{ fontSize: '0.875rem' }}>{link.label}</Link>
                 </li>
               ))}

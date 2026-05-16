@@ -4,6 +4,7 @@ import './globals.scss';
 import Providers from './providers';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import ChatWidget from '@/components/ui/ChatWidget';
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </main>
           <Footer />
+          <ChatWidget />
           <Toaster
             position="bottom-right"
             toastOptions={{

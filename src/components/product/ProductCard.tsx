@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { useCartStore } from '@/store/cartStore';
@@ -18,6 +19,7 @@ interface Props {
 export default function ProductCard({ product, index = 0 }: Props) {
   const [adding, setAdding] = useState(false);
   const addItem = useCartStore((s) => s.addItem);
+  const router = useRouter();
   const avgRating = getAverageRating(product.ratings);
 
   const handleAddToCart = async (e: React.MouseEvent) => {
@@ -98,14 +100,14 @@ export default function ProductCard({ product, index = 0 }: Props) {
                 )}
                 {product.stock === 0 ? 'Out of Stock' : adding ? 'Adding…' : 'Add to Cart'}
               </motion.button>
-              <Link
-                href={`/products/${product.id}`}
+              <button
                 className="btn btn-sm rounded-pill"
                 style={{ background: 'rgba(255,255,255,0.9)', color: '#1a1a2e', flexShrink: 0 }}
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => { e.preventDefault(); e.stopPropagation(); router.push(`/products/${product.id}`); }}
+                aria-label={`View ${product.name}`}
               >
                 👁
-              </Link>
+              </button>
             </div>
           </div>
 

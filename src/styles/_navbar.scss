@@ -5,6 +5,7 @@
   border-bottom: 1px solid rgba(255,255,255,0.06);
   transition: all 0.35s ease;
   padding: 1rem 0;
+  flex-wrap: wrap; // allows mobile menu row to wrap below
 
   &.scrolled {
     padding: 0.65rem 0;
