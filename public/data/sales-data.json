@@ -1,0 +1,39 @@
+{
+  "title": "Monthly Sales Report 2024",
+  "description": "Revenue, orders, and returns by month",
+  "summary": {
+    "total_revenue": 284500,
+    "total_orders": 3420,
+    "avg_order_value": 83.2,
+    "growth_rate": "18.5%",
+    "best_month": "November",
+    "top_category": "Electronics"
+  },
+  "monthly": [
+    { "month": "Jan", "revenue": 18200, "orders": 220, "returns": 12 },
+    { "month": "Feb", "revenue": 15800, "orders": 195, "returns": 8 },
+    { "month": "Mar", "revenue": 21500, "orders": 260, "returns": 15 },
+    { "month": "Apr", "revenue": 19200, "orders": 230, "returns": 11 },
+    { "month": "May", "revenue": 23400, "orders": 285, "returns": 18 },
+    { "month": "Jun", "revenue": 20100, "orders": 242, "returns": 13 },
+    { "month": "Jul", "revenue": 17900, "orders": 215, "returns": 9 },
+    { "month": "Aug", "revenue": 24800, "orders": 298, "returns": 20 },
+    { "month": "Sep", "revenue": 26300, "orders": 316, "returns": 22 },
+    { "month": "Oct", "revenue": 28700, "orders": 345, "returns": 25 },
+    { "month": "Nov", "revenue": 42100, "orders": 506, "returns": 38 },
+    { "month": "Dec", "revenue": 36500, "orders": 438, "returns": 31 }
+  ],
+  "categories": [
+    { "name": "Electronics", "revenue": 142250, "orders": 1710, "percentage": 50 },
+    { "name": "Clothing", "revenue": 71125, "orders": 855, "percentage": 25 },
+    { "name": "Home & Decor", "revenue": 56900, "orders": 684, "percentage": 20 },
+    { "name": "Other", "revenue": 14225, "orders": 171, "percentage": 5 }
+  ],
+  "top_products": [
+    { "name": "Wireless Headphones Pro", "revenue": 34800, "units": 290 },
+    { "name": "Smart Watch Series X", "revenue": 29600, "units": 148 },
+    { "name": "Laptop Stand Premium", "revenue": 18200, "units": 364 },
+    { "name": "Bluetooth Speaker", "revenue": 15400, "units": 220 },
+    { "name": "USB-C Hub 7-in-1", "revenue": 12600, "units": 360 }
+  ]
+}

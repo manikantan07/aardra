@@ -1,0 +1,28 @@
+{
+  "top_products": [
+    { "rank": 1, "name": "Wireless Headphones Pro",  "category": "Electronics", "revenue": 34800, "units": 290, "rating": 4.8, "trend": "up"   },
+    { "rank": 2, "name": "Smart Watch Series X",     "category": "Electronics", "revenue": 29600, "units": 148, "rating": 4.7, "trend": "up"   },
+    { "rank": 3, "name": "Laptop Stand Premium",     "category": "Electronics", "revenue": 18200, "units": 364, "rating": 4.6, "trend": "stable"},
+    { "rank": 4, "name": "Bluetooth Speaker",        "category": "Electronics", "revenue": 15400, "units": 220, "rating": 4.5, "trend": "up"   },
+    { "rank": 5, "name": "USB-C Hub 7-in-1",         "category": "Electronics", "revenue": 12600, "units": 360, "rating": 4.4, "trend": "up"   },
+    { "rank": 6, "name": "Linen Throw Blanket",      "category": "Home & Decor","revenue": 9800,  "units": 490, "rating": 4.7, "trend": "up"   },
+    { "rank": 7, "name": "Ceramic Mug Set",          "category": "Home & Decor","revenue": 7200,  "units": 600, "rating": 4.5, "trend": "stable"},
+    { "rank": 8, "name": "Slim Fit Chinos",          "category": "Clothing",    "revenue": 6800,  "units": 340, "rating": 4.3, "trend": "down" },
+    { "rank": 9, "name": "Cotton Crew Tee",          "category": "Clothing",    "revenue": 5600,  "units": 560, "rating": 4.2, "trend": "stable"},
+    { "rank": 10,"name": "Canvas Sneakers",          "category": "Clothing",    "revenue": 4900,  "units": 245, "rating": 4.1, "trend": "up"   }
+  ],
+  "top_customers": [
+    { "rank": 1, "name": "Rajesh Kumar",    "orders": 24, "spent": 3840, "location": "Mumbai"    },
+    { "rank": 2, "name": "Priya Sharma",    "orders": 19, "spent": 2960, "location": "Delhi"     },
+    { "rank": 3, "name": "Arjun Mehta",     "orders": 17, "spent": 2720, "location": "Bangalore" },
+    { "rank": 4, "name": "Sneha Pillai",    "orders": 15, "spent": 2400, "location": "Chennai"   },
+    { "rank": 5, "name": "Vikram Nair",     "orders": 14, "spent": 2240, "location": "Hyderabad" }
+  ],
+  "recent_orders": [
+    { "id": "#ORD-1042", "customer": "Rajesh Kumar",  "product": "Wireless Headphones Pro", "amount": 149, "status": "Delivered", "date": "2024-12-01" },
+    { "id": "#ORD-1041", "customer": "Priya Sharma",   "product": "Smart Watch Series X",    "amount": 199, "status": "Shipped",   "date": "2024-12-01" },
+    { "id": "#ORD-1040", "customer": "Arjun Mehta",    "product": "Laptop Stand Premium",    "amount": 49,  "status": "Processing","date": "2024-11-30" },
+    { "id": "#ORD-1039", "customer": "Sneha Pillai",   "product": "Linen Throw Blanket",     "amount": 59,  "status": "Delivered", "date": "2024-11-30" },
+    { "id": "#ORD-1038", "customer": "Vikram Nair",    "product": "Bluetooth Speaker",       "amount": 79,  "status": "Pending",   "date": "2024-11-29" }
+  ]
+}

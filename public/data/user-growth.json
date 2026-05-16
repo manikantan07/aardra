@@ -1,0 +1,40 @@
+{
+  "title": "User Growth & Engagement 2024",
+  "description": "Monthly user acquisition, retention, and activity metrics",
+  "summary": {
+    "total_users": 28450,
+    "active_users": 18920,
+    "new_users_this_month": 2340,
+    "churn_rate": "4.2%",
+    "avg_session_duration": "6m 24s",
+    "conversion_rate": "3.8%"
+  },
+  "monthly": [
+    { "month": "Jan", "new_users": 1200, "active_users": 8400, "churned": 320 },
+    { "month": "Feb", "new_users": 980,  "active_users": 8900, "churned": 280 },
+    { "month": "Mar", "new_users": 1450, "active_users": 10200, "churned": 340 },
+    { "month": "Apr", "new_users": 1320, "active_users": 11000, "churned": 310 },
+    { "month": "May", "new_users": 1680, "active_users": 12100, "churned": 390 },
+    { "month": "Jun", "new_users": 1540, "active_users": 12800, "churned": 360 },
+    { "month": "Jul", "new_users": 1290, "active_users": 13200, "churned": 410 },
+    { "month": "Aug", "new_users": 1820, "active_users": 14500, "churned": 430 },
+    { "month": "Sep", "new_users": 2100, "active_users": 15800, "churned": 470 },
+    { "month": "Oct", "new_users": 2340, "active_users": 16900, "churned": 510 },
+    { "month": "Nov", "new_users": 3200, "active_users": 19400, "churned": 580 },
+    { "month": "Dec", "new_users": 2800, "active_users": 18920, "churned": 620 }
+  ],
+  "demographics": [
+    { "age_group": "18-24", "percentage": 22, "count": 6259 },
+    { "age_group": "25-34", "percentage": 38, "count": 10811 },
+    { "age_group": "35-44", "percentage": 24, "count": 6828 },
+    { "age_group": "45-54", "percentage": 11, "count": 3130 },
+    { "age_group": "55+",   "percentage": 5,  "count": 1423 }
+  ],
+  "acquisition_channels": [
+    { "channel": "Organic Search", "users": 9952, "percentage": 35 },
+    { "channel": "Social Media",   "users": 7113, "percentage": 25 },
+    { "channel": "Email",          "users": 5690, "percentage": 20 },
+    { "channel": "Referral",       "users": 3983, "percentage": 14 },
+    { "channel": "Direct",         "users": 1708, "percentage": 6 }
+  ]
+}

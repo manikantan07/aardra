@@ -78,6 +78,11 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link href="/products?category=clothing" className="nav-link">Clothing</Link>
               </li>
+              <li className="nav-item">
+                <Link href="/chat" className="nav-link d-flex align-items-center gap-1">
+                  <span>🤖</span> AI Chat
+                </Link>
+              </li>
             </ul>
 
             <div className="d-flex align-items-center gap-3">

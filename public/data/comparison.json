@@ -1,0 +1,26 @@
+{
+  "title": "Product & Category Comparison 2024",
+  "description": "Side-by-side performance comparison across categories and time periods",
+  "category_comparison": {
+    "labels": ["Q1", "Q2", "Q3", "Q4"],
+    "datasets": [
+      { "label": "Electronics", "data": [42000, 56000, 68000, 98000], "color": "#e94560" },
+      { "label": "Clothing",    "data": [21000, 28000, 34000, 49000], "color": "#0f3460" },
+      { "label": "Home & Decor","data": [16800, 22400, 27200, 39200], "color": "#533483" }
+    ]
+  },
+  "yoy_comparison": {
+    "labels": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    "datasets": [
+      { "label": "2023", "data": [14200,12800,17100,15600,18900,16800,14200,19800,21200,23400,36800,30200], "color": "#adb5bd" },
+      { "label": "2024", "data": [18200,15800,21500,19200,23400,20100,17900,24800,26300,28700,42100,36500], "color": "#e94560" }
+    ]
+  },
+  "product_comparison": [
+    { "product": "Wireless Headphones Pro", "q1": 7200, "q2": 8400, "q3": 9600, "q4": 9600, "total": 34800, "growth": "28%" },
+    { "product": "Smart Watch Series X",    "q1": 5600, "q2": 7200, "q3": 8000, "q4": 8800, "total": 29600, "growth": "42%" },
+    { "product": "Laptop Stand Premium",    "q1": 4200, "q2": 4600, "q3": 4800, "q4": 4600, "total": 18200, "growth": "12%" },
+    { "product": "Bluetooth Speaker",       "q1": 3600, "q2": 3800, "q3": 4000, "q4": 4000, "total": 15400, "growth": "8%"  },
+    { "product": "USB-C Hub 7-in-1",        "q1": 2800, "q2": 3200, "q3": 3200, "q4": 3400, "total": 12600, "growth": "15%" }
+  ]
+}
